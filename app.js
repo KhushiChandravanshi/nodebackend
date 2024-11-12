@@ -24,12 +24,6 @@ app.get('/location',async (req,res) => {
     let query = {};
     let collection =  "location"
     let authKey = req.headers ['x-access-auth']
-    if(authKey == key){
-        let output = await getData(collection,query)
-        res.status(200).send(output)
-    }else{
-        res.status(401).send(`Unauthorised`)
-    }
 })
 app.get('/resturants',async(req,res)=>{
     let query ={};
